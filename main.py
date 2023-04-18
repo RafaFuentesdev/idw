@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 import math
 
-STATIONS_FILE = "estaciones_lluvia.parquet"
-STATIONS_IDW_FILE = "idw_lluvia.parquet"
+#STATIONS_FILE = "estaciones_lluvia.parquet"
+#STATIONS_IDW_FILE = "idw_lluvia.parquet"
+STATIONS_FILE = "estaciones_temperatura.parquet"
+STATIONS_IDW_FILE = "idw_temperatura.parquet"
 NUM_REF_POINTS = 3
 ALPHA = 3
 NCOLS = 13901
