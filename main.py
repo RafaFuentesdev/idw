@@ -4,8 +4,10 @@ import math
 
 #STATIONS_FILE = "estaciones_lluvia.parquet"
 #STATIONS_IDW_FILE = "idw_lluvia.parquet"
-STATIONS_FILE = "estaciones_temperatura.parquet"
-STATIONS_IDW_FILE = "idw_temperatura.parquet"
+#STATIONS_FILE = "estaciones_temperatura.parquet"
+#STATIONS_IDW_FILE = "idw_temperatura.parquet"
+STATIONS_FILE = "estaciones_tasas_secado.parquet"
+STATIONS_IDW_FILE = "idw_tasas_secado.parquet"
 NUM_REF_POINTS = 3
 ALPHA = 3
 NCOLS = 13901
@@ -79,7 +81,7 @@ def main():
             est_weights = [x for pair in zip(est_values, weight_values) for x in pair]
             results.append([id] + est_weights)
         else:
-            print(f"Station found: {id} - {id}, 1.0, 0.0, 0.0")
+            print(f"Station found: {saih_id} - {id}, 1.0, 0.0, 0.0")
             station = next(station for station in interpolator.stations if station.map_id == id)
             saih_id = int(station.saih_id)
             est_1 = saih_id
