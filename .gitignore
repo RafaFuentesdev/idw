@@ -2,3 +2,4 @@ venv
 *.parquet
 print_parquet.py  
 estaciones.txt
+ParmetrosSueloPepe.xlsx
